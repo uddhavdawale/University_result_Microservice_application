@@ -1,0 +1,16 @@
+package ud.student.demo.entity;
+
+import javax.persistence.Entity;
+
+@Entity(name="Stud_Reg")
+public class Student_Reg 
+{
+	private int PRN;
+	private String Fname;
+	private String Mname;
+	private String lname;
+	private String course;
+	private String  branch;
+	private String courseid;
+	
+}

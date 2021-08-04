@@ -1,0 +1,5 @@
+package ud.authority.demo.config;
+
+public class WebSecurityConfig {
+
+}

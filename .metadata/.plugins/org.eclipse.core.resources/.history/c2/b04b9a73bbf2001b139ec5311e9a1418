@@ -1,0 +1,38 @@
+package ud.authority.demo.authocontroller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import ud.authority.demo.model.Student_Regdup;
+import ud.authority.demo.model.Result;
+import ud.authority.demo.model.Student_Reg;
+
+@RestController
+public class Studentmanagmencontroller 
+{
+	//student/data/{id}
+	@Autowired
+	private RestTemplate rt;
+	@GetMapping("/getall/student")
+	public Student_Regdup getdata()
+	{
+		return new Student_Regdup();
+	}
+	public Student_Regdup getallonestudent(@PathVariable("id") String id)
+	{
+		//int id1=Integer.parseInt(id);
+		//Student_Reg ug=new Student_Reg();
+		//Result rs=new Result();
+		//Student_Reg user=serve.getstudbyid(Integer.parseInt(id));
+		Student_Reg user=rt.getForObject("http://localhost:8082/result/get/"+id, Result.class);
+		Result result=rt.getForObject("http://localhost:8082/result/get/"+id, Result.class);
+		//Student_Regdup obj=new Student_Regdup(ug,rs);
+		Student_Regdup obj=new Student_Regdup(user,result);
+		
+		return obj;
+	}
+	
+}

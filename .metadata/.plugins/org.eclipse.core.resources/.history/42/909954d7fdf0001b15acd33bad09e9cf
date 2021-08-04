@@ -1,0 +1,15 @@
+package ud.student.demo.regservice;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
+
+import ud.student.demo.entity.Student_Reg;
+import ud.student.demo.repo.Registrationrepo;
+
+
+public class RegistrationService  
+{
+	@Autowired
+	Registrationrepo repo;
+		
+}

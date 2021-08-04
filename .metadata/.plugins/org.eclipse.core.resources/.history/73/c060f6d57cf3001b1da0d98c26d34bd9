@@ -1,0 +1,9 @@
+cloud:
+    gateway:
+      routes:
+        - id: Authority-service
+          uri: lb://Authority-service
+          predicates:
+            - Path=/getall/student/**
+     
+     

@@ -1,0 +1,23 @@
+server:
+    port: 8085
+    
+
+
+    
+
+cloud:
+    gateway:
+      routes:
+        - id: REGISTRATION-SERVICE
+          uri: lb://REGISTRATION-SERVICE
+          predicates:
+            - Path=/student/**
+            
+
+        - id: RESULT-SERVICE
+          uri: lb://RESULT-SERVICE
+          predicates:
+            - Path=/result/get/**
+            
+     
+     

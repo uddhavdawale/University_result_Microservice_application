@@ -1,0 +1,17 @@
+package ud.authority.demo.authocontroller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import ud.authority.demo.model.Student_Regdup;
+
+@RestController
+public class Studentmanagmencontroller 
+{
+	//student/data/{id}
+	@GetMapping("/getall/student")
+	public Student_Regdup getdata()
+	{
+		return new Student_Regdup();
+	}
+}

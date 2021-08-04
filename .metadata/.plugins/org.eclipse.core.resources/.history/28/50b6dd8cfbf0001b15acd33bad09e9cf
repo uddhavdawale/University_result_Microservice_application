@@ -1,0 +1,19 @@
+package ud.student.demo.entity;
+
+import javax.persistence.Entity;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity(name="Stud_Reg")
+public class Student_Reg 
+{
+	private @Getter int PRN;
+	private @Getter @Setter Fname;
+	private String Mname;
+	private String lname;
+	private String course;
+	private String  branch;
+	private String courseid;
+	
+}

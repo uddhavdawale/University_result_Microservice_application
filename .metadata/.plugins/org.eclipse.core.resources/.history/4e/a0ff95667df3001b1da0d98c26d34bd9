@@ -1,0 +1,9 @@
+cloud:
+    gateway:
+      routes:
+        - id: REGISTRATION-SERVICE
+          uri: lb://REGISTRATION-SERVICE
+          predicates:
+            - Path=/student/**
+     
+     

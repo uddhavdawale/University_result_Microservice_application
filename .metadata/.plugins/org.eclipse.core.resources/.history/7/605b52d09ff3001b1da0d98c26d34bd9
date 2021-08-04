@@ -1,0 +1,5 @@
+
+result-service.port=8082
+registration-service.port=8081
+spring.application.name=gateway
+eureka.instance.hostname=localhost

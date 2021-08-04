@@ -1,0 +1,5 @@
+package ud.student.demo.regservice;
+
+public class RegistrationService {
+
+}

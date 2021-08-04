@@ -1,0 +1,18 @@
+package ud.authority.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import ud.authority.demo.repo.Employeerepo;
+
+@Service
+public class Employeeservice 
+{
+	@Autowired
+	private Employeerepo ereppo;
+	
+	public String storeemployee()
+	{
+		return "Employee record has been successfully";
+	}
+}

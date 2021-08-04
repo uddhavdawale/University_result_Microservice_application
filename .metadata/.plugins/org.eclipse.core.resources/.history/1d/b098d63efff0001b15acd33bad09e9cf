@@ -1,0 +1,13 @@
+package ud.student.demo.registrationcontroller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class registrationcontroller 
+{
+	public String registerUser()
+	{
+		return "registered";
+	}
+		
+}

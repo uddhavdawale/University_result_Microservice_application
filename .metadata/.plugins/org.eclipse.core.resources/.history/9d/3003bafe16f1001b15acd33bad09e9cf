@@ -1,0 +1,17 @@
+package ud.student.demo.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity(name="result")
+public class Result 
+{
+	@Id
+	private int PRN;	
+	private float marathi;
+	private float english;
+	private float hindi;
+	private float science;
+	private float math;
+	private float technology;
+}

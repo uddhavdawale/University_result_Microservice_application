@@ -1,0 +1,5 @@
+package ud.student.demo.dao;
+
+public interface ResultService {
+
+}

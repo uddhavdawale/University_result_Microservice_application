@@ -1,0 +1,4 @@
+
+server.port=8085
+eureka.instance.localhost=localhost
+spring.application.name=Gateway

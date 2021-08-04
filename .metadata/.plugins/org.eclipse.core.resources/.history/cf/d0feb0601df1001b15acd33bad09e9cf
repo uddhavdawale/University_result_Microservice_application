@@ -1,0 +1,9 @@
+package ud.student.demo.resultcontroller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ResultController 
+{
+	
+}

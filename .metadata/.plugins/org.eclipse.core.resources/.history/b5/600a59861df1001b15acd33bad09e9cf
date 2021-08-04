@@ -1,0 +1,14 @@
+package ud.student.demo.resultcontroller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import ud.student.demo.resultservice.resultserviceimpl;
+
+@RestController
+public class ResultController 
+{
+	@Autowired
+	resultserviceimpl serv;
+	
+}

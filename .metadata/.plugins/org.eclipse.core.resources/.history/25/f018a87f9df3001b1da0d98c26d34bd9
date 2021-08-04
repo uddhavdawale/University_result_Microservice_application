@@ -1,0 +1,5 @@
+
+registration-service.port=8081
+eureka.instance.hostname=localhost
+spring.application.name=gateway
+spring.cloud.discovery.enabled=true

@@ -1,0 +1,13 @@
+package ud.student.demo.repo;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.repository.CrudRepository;
+
+import ud.student.demo.entity.Student_Reg;
+
+public interface Registrationrepo extends CrudRepository<Student_Reg, Integer>
+{
+	
+}
+
+	

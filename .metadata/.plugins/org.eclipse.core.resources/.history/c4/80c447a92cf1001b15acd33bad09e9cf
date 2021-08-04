@@ -1,0 +1,14 @@
+package ud.student.demo.bean;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
+public class Student_Regdup 
+{
+	
+	private Student_Reg sr;
+	private Result result;
+	
+	
+}

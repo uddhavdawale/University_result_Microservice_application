@@ -1,0 +1,51 @@
+package ud.authority.demo.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Employee 
+{
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+	private String emp_name;
+	private String emp_surname;	
+	private String emp_phone;
+	public Employee(){}
+	public Employee(Long id, String emp_name, String emp_surname, String emp_phone) {
+		
+		this.id = id;
+		this.emp_name = emp_name;
+		this.emp_surname = emp_surname;
+		this.emp_phone = emp_phone;
+	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getEmp_name() {
+		return emp_name;
+	}
+	public void setEmp_name(String emp_name) {
+		this.emp_name = emp_name;
+	}
+	public String getEmp_surname() {
+		return emp_surname;
+	}
+	public void setEmp_surname(String emp_surname) {
+		this.emp_surname = emp_surname;
+	}
+	public String getEmp_phone() {
+		return emp_phone;
+	}
+	public void setEmp_phone(String emp_phone) {
+		this.emp_phone = emp_phone;
+	}
+	
+	
+}

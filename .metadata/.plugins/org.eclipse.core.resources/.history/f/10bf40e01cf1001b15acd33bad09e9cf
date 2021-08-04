@@ -1,0 +1,19 @@
+package ud.student.demo.resultservice;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import ud.student.demo.dao.ResultRepo;
+import ud.student.demo.entity.Result;
+
+@Service
+public class resultserviceimpl
+{
+	@Autowired
+	ResultRepo resultrepo;
+	public Result getresult(Integer prn)
+	{
+		Result rs=resultrepo.findById(prn).orElse(new Result());
+		return rs;
+	}
+}

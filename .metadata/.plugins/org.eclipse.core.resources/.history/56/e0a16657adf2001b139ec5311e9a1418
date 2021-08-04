@@ -1,0 +1,5 @@
+package ud.authority.demo.repo;
+
+public interface RoleRepository {
+
+}

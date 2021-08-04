@@ -1,0 +1,5 @@
+package ud.authority.demo.service;
+
+public class UserDetailsServiceImpl {
+
+}

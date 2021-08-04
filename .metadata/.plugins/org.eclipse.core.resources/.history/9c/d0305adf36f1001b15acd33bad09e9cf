@@ -1,0 +1,9 @@
+package ud.authority.demo.authocontroller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Authocontroller 
+{
+
+}

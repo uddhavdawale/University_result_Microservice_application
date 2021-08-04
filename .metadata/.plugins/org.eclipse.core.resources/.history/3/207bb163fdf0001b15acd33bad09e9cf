@@ -1,0 +1,10 @@
+package ud.student.demo.regservice;
+
+import org.springframework.data.repository.CrudRepository;
+
+import ud.student.demo.entity.Student_Reg;
+
+public class RegistrationService  implements CrudRepository<Student_Reg, Integer>
+{
+		
+}

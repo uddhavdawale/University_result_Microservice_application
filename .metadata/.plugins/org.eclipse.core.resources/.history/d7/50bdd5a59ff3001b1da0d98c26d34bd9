@@ -1,0 +1,29 @@
+server:
+    port: 8085
+    
+result-service:8082
+    
+eureka:
+   instance:
+     localhost: localhost
+    
+spring:
+  application:
+    name: Gateway
+
+cloud:
+    gateway:
+      routes:
+        - id: REGISTRATION-SERVICE
+          uri: lb://REGISTRATION-SERVICE
+          predicates:
+            - Path=/student/**
+            
+
+        - id: RESULT-SERVICE
+          uri: lb://RESULT-SERVICE
+          predicates:
+            - Path=/result/get/**
+            
+     
+     

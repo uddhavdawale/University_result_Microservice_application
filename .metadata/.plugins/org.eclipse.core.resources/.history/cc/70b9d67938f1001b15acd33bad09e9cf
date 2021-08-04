@@ -1,0 +1,26 @@
+package ud.authority.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import ud.authority.demo.model.Employee;
+import ud.authority.demo.repo.Employeerepo;
+
+@Service
+public class Employeeservice 
+{
+	@Autowired
+	private Employeerepo ereppo;
+	
+	public String storeemployee(Employee emp)
+	{
+		ereppo.save(emp);
+		return "Employee record has been added successfully";
+	}
+	
+	public Employee getbyid(Long id)
+	{
+		Employee emp=ereppo.findById(id).orElse(new Employee());
+		return null;
+	}
+}

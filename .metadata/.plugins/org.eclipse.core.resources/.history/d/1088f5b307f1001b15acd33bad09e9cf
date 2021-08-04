@@ -1,0 +1,43 @@
+package ud.student.demo.registrationcontroller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import ud.student.demo.entity.Student_Reg;
+import ud.student.demo.regservice.RegistrationService;
+
+@RestController()
+public class registrationcontroller 
+{
+	@Autowired
+	RegistrationService serve;
+	
+	@PostMapping("/student/register")
+	public String registerUser(@RequestBody Student_Reg rinfo)
+	{
+		return serve.saveRegistration(rinfo);
+	}
+	/*
+	public Student_Reg getRegisteredstudent()
+	{
+		return new Student_Reg(1, null, null, null, null, null, null);
+	}
+	*/
+	@RequestMapping("/student/getall")
+	public List<Student_Reg> getregisteredusersact()
+	{
+		return serve.getRegisteredUser();
+	}
+	@RequestMapping("/student/get/{id}")
+	public Student_Reg getbyid(@PathVariable("id") String id)
+	{
+		return serve.getstudbyid(Integer.parseInt(id));
+	}
+	
+}
